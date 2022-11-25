@@ -7,6 +7,9 @@ module.exports = {
         background: {
           DEFAULT: '#1F1F1F',
         },
+        background2 : {
+          DEFAULT: '#f4f4f4'
+        },
         primary: {
           DEFAULT: '#F8C784',
         },
