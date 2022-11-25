@@ -50,13 +50,13 @@ const HomePage2 = () => {
             <div className='mt-10 flex justify-center z-10'>
               <img src={content.logo} alt='logo' />
             </div>
-            <p className='font-bold text-xl flex justify-center text-center z-10 mt-10 md:mt-0'>
+            <p className='font-bold text-xl flex justify-center text-center z-10 mt-10 lg:mt-0'>
               {content.title}
             </p>
-            <p className='flex justify-center text-gray-400 text-center mt-10 md:mt-0 z-10'>
+            <p className='flex justify-center text-gray-400 text-center mt-10 lg:mt-0 z-10'>
               {content.description}
             </p>
-            <p className='text-primary text-6xl font-bold flex justify-end mt-10 md:mt-0 z-10'>
+            <p className='text-primary text-6xl font-bold flex justify-end mt-10 lg:mt-0 z-10'>
               0{index + 1}
             </p>
           </div>
