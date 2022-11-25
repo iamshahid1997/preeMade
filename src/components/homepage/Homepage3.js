@@ -24,7 +24,7 @@ const Homepage3 = () => {
           type speci men book. It has survived not turies also the leap into
           electronic typeset ting,he printing and typesetting industry
         </p>
-        <div className='flex mt-7 items-center'>
+        <div className='flex mt-7 items-center justify-center'>
           <div
             className={`${Styles.numberBox} text-primary text-6xl font-bold  w-44 h-44 flex justify-center items-center`}
           >
