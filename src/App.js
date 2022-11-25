@@ -1,7 +1,11 @@
+import NavBar from './components/navbar/NavBar';
+import PageRoutes from './routes/PageRoutes';
+
 function App() {
   return (
-    <div>
-      Preemade
+    <div className='font-body'>
+      <NavBar />
+      <PageRoutes />
     </div>
   );
 }

@@ -1,0 +1,187 @@
+.textAnimation {
+  animation: fadeInAnimation ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.horizonatalLine {
+  animation: horizontalAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes horizontalAnimation {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 250px;
+    height: 2px;
+  }
+}
+
+.verticalLine {
+  animation: verticalAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes verticalAnimation {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 2px;
+    height: 250px;
+  }
+}
+
+.imageScale {
+  animation: imageAnimation ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes imageAnimation {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.buttonPos {
+  top: 690px;
+  left: 500px;
+}
+
+@media only screen and (max-width : 1536px){
+    .buttonPos{
+		top: 550px;
+    }
+}
+
+@media only screen and (max-width : 1280px){
+    .buttonPos{
+		top: 500px;
+        left:400px;
+    }
+}
+@media only screen and (max-width : 1024px){
+    .buttonPos{
+		top: 600px;
+        left:300px;
+    }
+}
+
+@media only screen and (max-width : 500px){
+    .buttonPos{
+        top:550px;
+        left:120px;
+    }
+}
+
+
+
+.topHorizontalLine {
+  top: 150px;
+  left: 60px;
+  height: 2px;
+  width: 250px;
+}
+
+@media only screen and (max-width : 1536px){
+    .topHorizontalLine{
+		top: 100px;
+        left:30px
+    }
+}
+
+@media only screen and (max-width : 1280px){
+    .topHorizontalLine{
+		left:0px;
+        display: none;
+    }
+}
+
+.topVerticalLine {
+  top: 100px;
+  left: 100px;
+  height: 250px;
+  width: 2px;
+}
+
+@media only screen and (max-width : 1536px){
+    .topVerticalLine{
+		top: 70px;
+        left:70px
+    }
+}
+
+@media only screen and (max-width : 1280px){
+    .topVerticalLine{
+		left:0px;
+        display: none;
+    }
+}
+
+
+.bottomHorizontalLine {
+  top: 650px;
+  left: 600px;
+  height: 2px;
+  width: 250px;
+}
+
+@media only screen and (max-width : 1536px){
+    .bottomHorizontalLine{
+		top: 500px;
+    }
+}
+
+@media only screen and (max-width : 1280px){
+    .bottomHorizontalLine{
+		top: 450px;
+    }
+}
+
+@media only screen and (max-width : 1200px){
+    .bottomHorizontalLine{
+		display: none;
+    }
+}
+
+.bottomVerticalLine {
+  top: 450px;
+  left: 800px;
+  height: 250px;
+  width: 2px;
+}
+
+@media only screen and (max-width : 1536px){
+    .bottomVerticalLine{
+		top: 300px;
+    }
+}
+
+@media only screen and (max-width : 1280px){
+    .bottomVerticalLine{
+		top: 250px;
+    }
+}
+
+@media only screen and (max-width : 1200px){
+    .bottomVerticalLine{
+		display: none;
+    }
+}
