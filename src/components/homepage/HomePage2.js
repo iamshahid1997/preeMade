@@ -31,18 +31,18 @@ const HomePage2 = () => {
       className={`${Styles.homepage2} flex justify-center items-center bg-background2`}
     >
       <div
-        className={`${Styles.section} flex flex-col lg:flex-row bg-white w-full lg:w-3/5 mt-24 md:mt-0 mx-3 md:mx-0`}
+        className={`${Styles.section} flex flex-col md:flex-row bg-white w-full md:w-4/5 xl:w-3/5 mt-24 md:mt-0 mx-3 md:mx-0`}
       >
         {CONTENT.map((content, index) => (
           <div
             onMouseEnter={() => setActive(index)}
-            className={`${active === index ? 'text-white' : '' } lg:w-1/3 p-6 flex flex-col justify-between relative overflow-hidden`}
+            className={`${active === index ? 'text-white' : '' }  md:w-1/3 p-6 flex flex-col justify-between relative overflow-hidden`}
           >
             {active === index && (
               <img
                 src={content.img}
                 alt='img'
-                className={`${Styles.imageScale} brightness-50 absolute top-0 left-0`}
+                className={`${Styles.imageScale} brightness-50 absolute top-0 left-0 w-full h-full`}
               />
             )}
             <div className={`${Styles.horizontalBorder} bg-primary`}></div>
@@ -50,7 +50,7 @@ const HomePage2 = () => {
             <div className='mt-10 flex justify-center z-10'>
               <img src={content.logo} alt='logo' />
             </div>
-            <p className='font-bold text-xl flex justify-center z-10 mt-10 md:mt-0'>
+            <p className='font-bold text-xl flex justify-center text-center z-10 mt-10 md:mt-0'>
               {content.title}
             </p>
             <p className='flex justify-center text-gray-400 text-center mt-10 md:mt-0 z-10'>
