@@ -26,11 +26,11 @@ const Homepage3 = () => {
         </p>
         <div className='flex mt-7 items-center justify-center'>
           <div
-            className={`${Styles.numberBox} text-primary text-6xl font-bold  w-44 h-44 flex justify-center items-center`}
+            className={`${Styles.numberBox} text-primary text-6xl font-bold w-32 h-32  lg:w-44 lg:h-44 flex justify-center items-center`}
           >
             <CountUp end={28} duration={1} />+
           </div>
-          <p className='text-4xl w-32 ml-6 font-light'>
+          <p className='text-2xl lg:text-4xl w-32 ml-6 font-light'>
             Years Expiriance Working
           </p>
         </div>
