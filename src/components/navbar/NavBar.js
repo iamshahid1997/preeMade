@@ -7,10 +7,13 @@ import {
   FaBars,
   FaTimes,
 } from 'react-icons/fa';
+import useScreenSize from '../../utils/customHooks/useScreenSize';
 import Styles from './NavBar.module.css';
 
 const NavBar = () => {
   const [showNav, setShowNav] = useState(false);
+  const windowSize = useScreenSize();
+
   const NAV_HEADERS = ['HOME', 'ABOUT', 'PROJECT', 'PAGES', 'BLOGS', 'CONTACT'];
   return (
     <div>
@@ -28,7 +31,7 @@ const NavBar = () => {
             </p>
           </div>
         </div>
-        <div className='text-xl' onClick={() => setShowNav(true)}>
+        <div className='text-xl md:hidden' onClick={() => setShowNav(true)}>
           <FaBars />
         </div>
         <div className='hidden md:grid col-span-6'>
@@ -54,36 +57,40 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <div
-        className={`${
-          showNav ? Styles.navbarOpen : Styles.navbarClose
-        } h-screen flex flex-col bg-white left-0 top-0 fixed z-10`}
-      >
+      {windowSize.width < 768 && (
         <div
           className={`${
-            showNav ? Styles.textAnimationClose : Styles.textAnimationOpen
-          }`}
+            showNav ? Styles.navbarOpen : Styles.navbarClose
+          } h-screen flex flex-col bg-white left-0 top-0 w-0 fixed z-10`}
         >
           <div
-            className='flex flex-col w-full items-end mt-3 pr-3 text-primary'
-            onClick={() => setShowNav(false)}
+            className={`${
+              showNav ? Styles.textAnimationClose : Styles.textAnimationOpen
+            }`}
           >
-            <FaTimes />
-          </div>
-          <div className='flex w-full justify-center items-center my-6'>
-            <img src={logo} alt='logo' className='w-10 cursor-pointer' />
-            <p className='pl-2 font-semibold text-lg md:text-2xl text-primary'>
-              {' '}
-              PreeMade{' '}
-            </p>
-          </div>
-          <div className='space-y-4 text-sm px-4'>
-            {NAV_HEADERS.map((header, index) => (
-              <p key={index} className="border-b-2 border-primary pb-2">{header}</p>
-            ))}
+            <div
+              className='flex flex-col w-full items-end mt-3 pr-3 text-primary'
+              onClick={() => setShowNav(false)}
+            >
+              <FaTimes />
+            </div>
+            <div className='flex w-full justify-center items-center my-6'>
+              <img src={logo} alt='logo' className='w-10 cursor-pointer' />
+              <p className='pl-2 font-semibold text-lg md:text-2xl text-primary'>
+                {' '}
+                PreeMade{' '}
+              </p>
+            </div>
+            <div className='space-y-4 text-sm px-4'>
+              {NAV_HEADERS.map((header, index) => (
+                <p key={index} className='border-b-2 border-primary pb-2'>
+                  {header}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
