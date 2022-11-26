@@ -25,7 +25,7 @@ const Homepage4 = () => {
   ];
   return (
     <div className=' py-24 md:py-40 flex flex-col items-center bg-background2 text-center'>
-      <p className='text-primary font-bold text-xl'>WORK PROCESS</p>
+      <p className='text-primary font-bold text-xl tracking-widest'>WORK PROCESS</p>
       <p className='text-3xl px-3 md:text-5xl font-bold mt-3'>How We Complete Works</p>
       <div className='text-gray-400 mt-6 text-center text-lg px-3'>
         <p>

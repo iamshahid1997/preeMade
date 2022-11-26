@@ -14,11 +14,11 @@ const NavBar = () => {
   const [showNav, setShowNav] = useState(false);
   const windowSize = useScreenSize();
 
-  const NAV_HEADERS = ['HOME', 'ABOUT', 'PROJECT', 'PAGES', 'BLOGS', 'CONTACT'];
+  const NAV_HEADERS = ['HOME', 'ABOUT',  'CONTACT'];
   return (
     <div>
       <div className='bg-background lg:grid lg:grid-cols-12 px-3 py-4 md:px-10 md:py-8 flex items-center justify-between lg:justify-start text-white w-full'>
-        <div className='lg:col-span-3'>
+        <div className='lg:col-span-4'>
           <div className='flex items-center'>
             <img
               src={logo}
@@ -34,7 +34,7 @@ const NavBar = () => {
         <div className='text-xl lg:hidden' onClick={() => setShowNav(true)}>
           <FaBars />
         </div>
-        <div className='hidden lg:grid col-span-6'>
+        <div className='hidden lg:grid col-span-3'>
           <div className='flex justify-between items-center font-medium'>
             {NAV_HEADERS.map((header, index) => (
               <p key={index} className='cursor-pointer hover:text-primary'>
@@ -43,7 +43,7 @@ const NavBar = () => {
             ))}
           </div>
         </div>
-        <div className='hidden lg:grid col-span-3'>
+        <div className='hidden lg:grid col-span-5'>
           <div className='flex items-center justify-end space-x-5'>
             <div className='flex items-center'>
               <span className='text-primary pr-2'>CALL US: </span>
