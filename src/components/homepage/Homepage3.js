@@ -4,7 +4,7 @@ import Styles from './HomePage3.module.css';
 
 const Homepage3 = () => {
   return (
-    <div className='mt-24 flex flex-col items-center xl:items-start xl:flex-row lg:space-x-32 relative justify-center'>
+    <div className='mt-24 flex flex-col items-center xl:items-start xl:flex-row lg:space-x-32 relative justify-center mb-10'>
       <div className='absolute -top-10 left-1/3'>
         <img
           src='https://html.themexriver.com/Archix/assets/img/bg/ab-bg.png'
@@ -46,11 +46,6 @@ const Homepage3 = () => {
           src='https://html.themexriver.com/Archix/assets/img/about/ab1.jpg'
           alt='img'
           className='w-full h-full'
-        />
-        <img
-          src='	https://html.themexriver.com/Archix/assets/img/bg/dot-shape.png'
-          alt='dottedImg'
-          className='absolute hidden lg:block -bottom-10 -right-6 -z-10'
         />
         <div className='absolute h-10 w-24 bg-white right-0 top-0'></div>
         <div className='absolute h-10 w-24 bg-white right-24 top-10'></div>

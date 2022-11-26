@@ -1,0 +1,47 @@
+.homepage4 {
+  height: 400px;
+  width: 400px;
+}
+
+
+@media only screen and (max-width: 1280px) {
+  .homepage4 {
+    width: 360px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .homepage4 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .homepage4 {
+    height: 400px;
+    width: 100%;
+  }
+}
+
+.box {
+  height: 460px;
+  width:360px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .box {
+    width: 320px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .box {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .box {
+    width:80%;
+  }
+}
