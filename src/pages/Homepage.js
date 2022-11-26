@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/footer/Footer';
 import Homepage1 from '../components/homepage/Homepage1';
 import HomePage2 from '../components/homepage/HomePage2';
 import Homepage3 from '../components/homepage/Homepage3';
@@ -15,6 +16,7 @@ const Homepage = () => {
       <Homepage4 />
       <Homepage5 />
       <Homepage6 />
+      <Footer />
     </div>
   );
 };

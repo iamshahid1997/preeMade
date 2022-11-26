@@ -51,7 +51,7 @@ const Homepage6 = () => {
       </div>
       <div className='px-2'>
         <p className='text-primary font-semibold text-xl pl-4'>Our Team</p>
-        <p className=' text-gray-400 text-xl w-full pl-4 pr-8 xl:w-96 mt-7 h-72 xl:h-64'>
+        <p className=' text-gray-400 text-xl w-full pl-4 pr-8 md:w-96 mt-7 h-72 xl:h-64'>
           {TEAM[teamMember].about}
         </p>
         <img src={TEAM[teamMember].img} alt='img' className='mt-10 h-56 pl-4' />
