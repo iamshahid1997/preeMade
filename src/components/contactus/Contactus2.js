@@ -115,9 +115,9 @@ const Contactus2 = () => {
             />
           </div>
 
-          <div>
+          <div className='col-span-2'>
             {showError && (
-              <p className='text-red-600 -mt-3 mb-4'>
+              <p className='text-red-600 -mt-3 mb-4 w-full'>
                 Please enter all the details
               </p>
             )}
@@ -132,7 +132,7 @@ const Contactus2 = () => {
                   type='button'
                   className='transition-all ease-linear delay-150 duration-300 rounded-xl w-48 h-12 bg-primary text-white font-semibold hover:text-black hover:bg-white'
                 >
-                  View Works
+                  Submit Now
                 </button>
               </a>
             ) : (
@@ -141,7 +141,7 @@ const Contactus2 = () => {
                 onClick={() => setShowError(true)}
                 className='transition-all ease-linear delay-150 duration-300 rounded-xl w-48 h-12 bg-primary text-white font-semibold hover:text-black hover:bg-white'
               >
-                View Works
+                Submit Now
               </button>
             )}
 
