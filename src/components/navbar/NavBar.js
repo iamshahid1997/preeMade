@@ -9,16 +9,31 @@ import {
 } from 'react-icons/fa';
 import useScreenSize from '../../utils/customHooks/useScreenSize';
 import Styles from './NavBar.module.css';
+import { Link } from 'react-router-dom';
+
+const NAV_HEADERS = [
+  {
+    title: 'HOME',
+    link: '/',
+  },
+  {
+    title: 'ABOUT US',
+    link: '/aboutus',
+  },
+  {
+    title: 'CONTACT US',
+    link: '/contactus',
+  },
+];
 
 const NavBar = () => {
   const [showNav, setShowNav] = useState(false);
   const windowSize = useScreenSize();
 
-  const NAV_HEADERS = ['HOME', 'ABOUT',  'CONTACT'];
   return (
     <div>
       <div className='bg-background lg:grid lg:grid-cols-12 px-3 py-4 md:px-10 md:py-8 flex items-center justify-between lg:justify-start text-white w-full'>
-        <div className='lg:col-span-5'>
+        <div className='lg:col-span-4'>
           <div className='flex items-center'>
             <img
               src={logo}
@@ -38,12 +53,15 @@ const NavBar = () => {
           <div className='flex justify-between items-center font-medium'>
             {NAV_HEADERS.map((header, index) => (
               <p key={index} className='cursor-pointer hover:text-primary'>
-                {header}
+                <Link to={header.link} key={index}>
+                  {' '}
+                  {header.title}
+                </Link>
               </p>
             ))}
           </div>
         </div>
-        <div className='hidden lg:grid col-span-4'>
+        <div className='hidden lg:grid col-span-5'>
           <div className='flex items-center justify-end space-x-5'>
             <div className='flex items-center'>
               <span className='text-primary pr-2'>CALL US: </span>
@@ -84,7 +102,7 @@ const NavBar = () => {
             <div className='space-y-4 text-sm px-4'>
               {NAV_HEADERS.map((header, index) => (
                 <p key={index} className='border-b-2 border-primary pb-2'>
-                  {header}
+                  {header.title}
                 </p>
               ))}
             </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Homepage6 = () => {
+const Aboutus4 = () => {
   const [teamMember, setTeamMember] = useState(0);
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -35,7 +35,7 @@ const Homepage6 = () => {
     },
   ];
   return (
-    <div className='mt-24 flex flex-col items-center xl:items-start xl:flex-row lg:space-x-10 relative justify-center py-24 bg-background2'>
+    <div className='w-full mt-24 flex flex-col items-center xl:items-start xl:flex-row lg:space-x-10 relative justify-center py-24 bg-background2'>
       <div className='relative px-10 mt-24 xl:mt-0 hidden xl:block'>
         <img
           src='	https://html.themexriver.com/Archix/assets/img/about/ab2.jpg'
@@ -75,4 +75,4 @@ const Homepage6 = () => {
   );
 };
 
-export default Homepage6;
+export default Aboutus4;
