@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Line from '../commons/Line';
 import Styles from './Homepage1.module.css';
 
@@ -118,7 +119,7 @@ const Homepage1 = () => {
       </div>
       <div className={`absolute ${Styles.buttonPos}`}>
         <button className='transition-all ease-linear delay-150 duration-300 rounded-xl w-48 h-12 bg-primary text-white font-semibold hover:text-black hover:bg-white'>
-          View Works
+          <Link to='/aboutus'>View Works</Link>
         </button>
         <div className='border-2 rounded-xl h-12 -mt-10 ml-2 w-48'></div>
       </div>

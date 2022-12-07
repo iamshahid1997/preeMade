@@ -1,5 +1,6 @@
 import React from 'react';
 import CountUp from 'react-countup';
+import { Link } from 'react-router-dom';
 import Styles from './HomePage3.module.css';
 
 const Homepage3 = () => {
@@ -36,7 +37,7 @@ const Homepage3 = () => {
         </div>
         <div className='absolute mt-6 left-1/3'>
           <button className='transition-all ease-linear delay-150 duration-300 rounded-xl w-48 h-12 bg-primary text-white font-semibold hover:text-black hover:bg-white'>
-            View Works
+          <Link to='/aboutus'>View Works</Link>
           </button>
           <div className='border-2 rounded-xl h-12 -mt-10 ml-2 w-48'></div>
         </div>
