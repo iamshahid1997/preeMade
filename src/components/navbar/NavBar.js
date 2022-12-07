@@ -102,7 +102,10 @@ const NavBar = () => {
             <div className='space-y-4 text-sm px-4'>
               {NAV_HEADERS.map((header, index) => (
                 <p key={index} className='border-b-2 border-primary pb-2'>
-                  {header.title}
+                  <Link to={header.link} key={index}>
+                    {' '}
+                    {header.title}
+                  </Link>
                 </p>
               ))}
             </div>
