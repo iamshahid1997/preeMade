@@ -1,12 +1,12 @@
 import React from 'react';
-import Contactus1 from '../components/contactus/Contactus1';
+import PageHeader from '../components/commons/PageHeader';
 import Contactus2 from '../components/contactus/Contactus2';
 import Footer from '../components/footer/Footer';
 
 const Contactus = () => {
   return (
     <div className='h-screen'>
-      <Contactus1 />
+      <PageHeader title='Conctact Us' />
       <Contactus2 />
       <Footer />
     </div>

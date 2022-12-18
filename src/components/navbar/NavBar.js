@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../../assets/logo/logo.png';
 import {
   FaFacebookF,
@@ -9,7 +9,7 @@ import {
 } from 'react-icons/fa';
 import useScreenSize from '../../utils/customHooks/useScreenSize';
 import Styles from './NavBar.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const NAV_HEADERS = [
   {
@@ -21,6 +21,10 @@ const NAV_HEADERS = [
     link: '/aboutus',
   },
   {
+    title: 'PROJECTS',
+    link: '/projects',
+  },
+  {
     title: 'CONTACT US',
     link: '/contactus',
   },
@@ -29,7 +33,22 @@ const NAV_HEADERS = [
 const NavBar = () => {
   const [showNav, setShowNav] = useState(false);
   const windowSize = useScreenSize();
+  const routePath = useLocation(); // for getting the url of the page
 
+  useEffect(() => {
+    setShowNav(window.location.pathname); // set the page url
+    if (routePath.pathname === '/') {
+      setShowNav('HOME');
+    } else if (routePath.pathname === '/aboutus') {
+      setShowNav('ABOUT US');
+    } else if (routePath.pathname === '/projects') {
+      setShowNav('PROJECTS');
+    } else if (routePath.pathname === '/contactus') {
+      setShowNav('CONTACT US');
+    }
+  }, [routePath.pathname]);
+
+  console.log(showNav);
   return (
     <div>
       <div className='bg-background lg:grid lg:grid-cols-12 px-3 py-4 md:px-10 md:py-8 flex items-center justify-between lg:justify-start text-white w-full'>
@@ -49,10 +68,15 @@ const NavBar = () => {
         <div className='text-xl lg:hidden' onClick={() => setShowNav(true)}>
           <FaBars />
         </div>
-        <div className='hidden lg:grid col-span-3'>
+        <div className='hidden lg:grid col-span-4'>
           <div className='flex justify-between items-center font-medium'>
             {NAV_HEADERS.map((header, index) => (
-              <p key={index} className='cursor-pointer hover:text-primary'>
+              <p
+                key={index}
+                className={`${
+                  header.title === showNav ? 'text-primary' : 'text-gray-200'
+                } cursor-pointer hover:text-primary`}
+              >
                 <Link to={header.link} key={index}>
                   {' '}
                   {header.title}
@@ -61,7 +85,7 @@ const NavBar = () => {
             ))}
           </div>
         </div>
-        <div className='hidden lg:grid col-span-5'>
+        <div className='hidden lg:grid col-span-4'>
           <div className='flex items-center justify-end space-x-5'>
             <div className='flex items-center'>
               <span className='text-primary pr-2'>CALL US: </span>
@@ -101,7 +125,13 @@ const NavBar = () => {
             </div>
             <div className='space-y-4 text-sm px-4'>
               {NAV_HEADERS.map((header, index) => (
-                <p key={index} className='border-b-2 border-primary pb-2' onClick={() => setShowNav(false)}>
+                <p
+                  key={index}
+                  className={`${
+                    header.title === showNav ? 'text-primary' : 'text-gray-800'
+                  } border-b-2 border-primary pb-2`}
+                  onClick={() => setShowNav(false)}
+                >
                   <Link to={header.link} key={index}>
                     {' '}
                     {header.title}

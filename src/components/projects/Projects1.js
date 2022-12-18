@@ -1,11 +1,10 @@
 import React from 'react';
-import './Aboutus3.css';
+import './Project1.css';
 
-const Aboutus3 = () => {
+const Project1 = () => {
   return (
-    <div classNameName='w-full mt-20'>
+    <div className='w-full py-[100px]'>
       <div className='flex flex-col md:flex-row gap-x-20 justify-center w-full px-4 md:px-10 lg:px-0'>
-        <p className='text-5xl text-primary'>Projects</p>
         <div>
           <ul
             className='nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4 text-2xl'
@@ -476,4 +475,4 @@ const Aboutus3 = () => {
   );
 };
 
-export default Aboutus3;
+export default Project1;

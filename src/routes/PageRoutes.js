@@ -4,6 +4,7 @@ import ScrollToTop from '../components/commons/ScrollToTop';
 import Aboutus from '../pages/Aboutus';
 import Contactus from '../pages/Contactus';
 import Homepage from '../pages/Homepage';
+import Projects from '../pages/Projects';
 
 function PageRoutes() {
   return (
@@ -15,6 +16,7 @@ function PageRoutes() {
         <Route exact path="/" element={<Homepage />} />
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/contactus" element={<Contactus />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
     </>
   );

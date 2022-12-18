@@ -1,15 +1,13 @@
 import React from 'react';
-import Aboutus2 from '../components/aboutus/AboutUs2';
-import Aboutus4 from '../components/aboutus/Aboutus4';
 import PageHeader from '../components/commons/PageHeader';
 import Footer from '../components/footer/Footer';
+import Project1 from '../components/projects/Projects1';
 
 const Aboutus = () => {
   return (
     <div className='h-screen'>
-      <PageHeader title = "About Us" />
-      <Aboutus2 />
-      <Aboutus4 />
+      <PageHeader title='Projects' />
+      <Project1 />
       <Footer />
     </div>
   );

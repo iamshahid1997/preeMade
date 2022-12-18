@@ -27,7 +27,7 @@ const Homepage5 = () => {
   return (
     <div className='flex flex-col md:flex-row items-center md:items-start md:justify-center my-10'>
       {CONTENT.map((content, index) => (
-        <div className='w-full md:w-1/4 h-48 md:h-72 flex flex-col items-center justify-center text-center'>
+        <div className='w-full md:w-1/4 h-48 md:h-72 flex flex-col items-center justify-center text-center' key={index}>
           <div className='w-1 h-16 bg-primary'></div>
           <div className='h-3 w-3 rounded-full bg-primary'></div>
           <p className='text-4xl font-bold text-primary mt-3'>

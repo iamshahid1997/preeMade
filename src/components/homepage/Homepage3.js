@@ -13,19 +13,23 @@ const Homepage3 = () => {
         />
       </div>
       <div className='text-center px-2'>
-        <p className='text-primary font-semibold'>ABOUT ARCHIX</p>
+        <p className='text-primary font-semibold'>ABOUT PreeMade</p>
         <div className='text-4xl font-bold mt-7'>
-          <p>Global Architecture</p>
-          <p>Design Studio Since 1995</p>
+          <p>Architecture</p>
+          <p>Design Studio Since 2022</p>
         </div>
         <p className={`${Styles.textwidth} text-gray-400 text-xl w-96 mt-7`}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          indust. Lorem Ipsum has been the dard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to a
-          type speci men book. It has survived not turies also the leap into
-          electronic typeset ting,he printing and typesetting industry
+          We, headquartered at Gurugram, are a team of Architects, Urban Planner
+          and Interior designers having completed numerous of projects producing
+          designs which are circumstantial in developing the spaces. electronic
+          typeset ting,he printing and typesetting industry
         </p>
-        <div className='flex mt-7 items-center justify-center'>
+        <p className={`${Styles.textwidth} text-gray-400 text-xl w-96`}>
+          We strive to produce the design concept with primary focus point
+          revolving around implementing the design with the integration of
+          climatic factor which helps in generating sustainable designs.
+        </p>
+        <div className='flex mt-7 mb-20 items-center justify-center'>
           <div
             className={`${Styles.numberBox} text-primary text-6xl font-bold w-32 h-32  lg:w-44 lg:h-44 flex justify-center items-center`}
           >
@@ -35,11 +39,10 @@ const Homepage3 = () => {
             Years Expiriance Working
           </p>
         </div>
-        <div className='absolute mt-6 left-1/3'>
+        <div className=''>
           <button className='transition-all ease-linear delay-150 duration-300 rounded-xl w-48 h-12 bg-primary text-white font-semibold hover:text-black hover:bg-white'>
-          <Link to='/aboutus'>View Works</Link>
+            <Link to='/aboutus'>View Works</Link>
           </button>
-          <div className='border-2 rounded-xl h-12 -mt-10 ml-2 w-48'></div>
         </div>
       </div>
       <div className='relative px-10 mt-24 xl:mt-0'>
