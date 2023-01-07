@@ -106,7 +106,7 @@ const HomePage2 = () => {
                 <img
                   src={content.img}
                   alt='img'
-                  className={`${Styles.imageScale} brightness-50 absolute top-0 left-0 w-full h-full`}
+                  className={`${Styles.imageScale} absolute top-0 left-0 w-full h-full brightness-[.2]`}
                 />
               )}
               <div className={`${Styles.horizontalBorder} bg-primary`}></div>
@@ -119,11 +119,11 @@ const HomePage2 = () => {
               </p>
               <p
                 className={`${
-                  active === index ? 'text-gray-200' : 'text-gray-400'
-                } flex flex-col pl-6 mt-10 lg:mt-4 z-10 text-sm`}
+                  active === index ? 'text-gray-50' : 'text-gray-400'
+                } flex flex-col pl-6 mt-10 lg:mt-4 z-10 `}
               >
                 {content.description.map((des, i) => (
-                  <span className='flex space-x-1' key={i}>
+                  <span className='flex space-x-1 font-medium' key={i}>
                     <span className='font-semibold'>{i + 1}.</span> <span>{des}</span>
                   </span>
                 ))}

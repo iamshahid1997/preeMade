@@ -92,9 +92,9 @@ const NavBar = () => {
               <span>9958477837</span>
             </div>
             <div className='flex items-center space-x-4 border-l-2 border-gray-500 pl-3'>
-              <FaFacebookF className='hover:text-primary' />
-              <FaTwitter className='hover:text-primary' />
-              <FaInstagram className='hover:text-primary' />
+              <FaFacebookF className='hover:text-primary hover:scale-125' />
+              <FaTwitter className='hover:text-primary hover:scale-125' />
+              <FaInstagram className='hover:text-primary hover:scale-125' />
             </div>
           </div>
         </div>
